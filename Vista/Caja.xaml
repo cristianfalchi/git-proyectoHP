@@ -1,0 +1,233 @@
+﻿<Window x:Class="Tesoreria.Caja" WindowState="Maximized"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tesoreria"
+        mc:Ignorable="d"
+        Title="Caja 1: Falchi Cristian" Height="790" Width="1383.45" >
+
+
+
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25" ></RowDefinition>
+            <RowDefinition Height="700" ></RowDefinition>
+            <RowDefinition Height="*" ></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Menu IsMainMenu="True" Background="Coral" Grid.Row="0" >
+            <MenuItem Header="Operaciones" FontSize="15">
+                <MenuItem Header="Arqueo de Caja"></MenuItem>
+                <MenuItem Header="Bajada de Dinero"></MenuItem>
+                <MenuItem Header="Salida de Caja"></MenuItem>
+                <MenuItem Header="Cálculo"></MenuItem>
+                <MenuItem Header="Limpiar Caja"></MenuItem>
+            </MenuItem>
+
+            <MenuItem Header="Resumen" FontSize="15">
+                <MenuItem Header="Total Repartos"></MenuItem>
+                <MenuItem Header="Total Ingresos y Egresos"></MenuItem>
+                <MenuItem Header="Total General"></MenuItem>
+            </MenuItem>
+        </Menu>
+
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions  >
+                <ColumnDefinition Width="153.5"></ColumnDefinition>
+                <ColumnDefinition Width="656.5"/>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0" Orientation="Vertical" VerticalAlignment="Top" Grid.ColumnSpan="2">
+
+
+                <Label Content="IGRESOS A CAJA" FontWeight="ExtraBlack" HorizontalAlignment="Center" ></Label>
+                <TabControl  Height="520"  Margin="10,0,-4,0" VerticalAlignment="Top" BorderThickness="2" BorderBrush="DarkBlue">
+                    
+                    <TabItem Header="Resumen">
+                        <StackPanel Orientation="Vertical">
+                            <DataGrid Name="dtgResumen" HorizontalAlignment="Left" Height="410" Width="796" BorderThickness="1">
+                                <DataGrid.Resources>
+                                    <Style TargetType="{x:Type DataGridColumnHeader}" >
+                                        <Setter Property="Background" Value="Coral"></Setter>
+                                        <Setter Property="FontWeight" Value="SemiBold"></Setter>
+                                        <Setter Property="BorderThickness" Value="0,0,1,2"></Setter>
+                                        <Setter Property="BorderBrush" Value="Black"></Setter>
+                                        <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
+                                    </Style>
+                                </DataGrid.Resources>
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Nombre" Width="170" CanUserResize="false" />
+                                    <DataGridTextColumn Header="Total entrega" Width="123" CanUserResize="false"/>
+                                    <DataGridTextColumn Header="Billetes"  Width="123" CanUserResize="false" />
+                                    <DataGridTextColumn Header="Monedas"  Width="123" CanUserResize="false"/>
+                                    <DataGridTextColumn Header="Cheques"  Width="123" CanUserResize="false"/>
+                                    <DataGridTextColumn Header="Depositos"  Width="125" CanUserResize="false"/>
+                                </DataGrid.Columns>
+                               
+                            </DataGrid>
+                            <StackPanel Orientation="Horizontal">
+                                <Label Content="Total Clientes" FontSize="15" Margin="25 10 10 10 " Width="100"></Label>
+                                <TextBox Width="123" BorderThickness="1" BorderBrush="Black" Margin="35 10 0 10" Height="24"></TextBox>
+                                <TextBox Width="123" BorderThickness="1" BorderBrush="Black" Margin="0 10 0 10" Height="24"></TextBox>
+                                <TextBox Width="123" BorderThickness="1" BorderBrush="Black" Margin="0 10 0 10" Height="24"></TextBox>
+                                <TextBox Width="123" BorderThickness="1" BorderBrush="Black" Margin="0 10 0 10" Height="24"></TextBox>
+                                <TextBox Width="126" BorderThickness="1" BorderBrush="Black" Margin="0 10 0 10" Height="24"></TextBox>
+                            </StackPanel>
+                            <Button Content="Nuevo Ingreso" Width="150" Background="Coral" Click="Button_Click"></Button>
+                        </StackPanel>
+                    </TabItem>
+
+                    <TabItem Header="Empresa">
+                        <StackPanel Orientation="Vertical">
+                            <DataGrid Name="dtgCliente" HorizontalAlignment="Left" Height="410" Width="796" BorderThickness="1">
+                                <DataGrid.Resources>
+                                    <Style TargetType="{x:Type DataGridColumnHeader}" >
+                                        <Setter Property="Background" Value="Coral"></Setter>
+                                        <Setter Property="FontWeight" Value="SemiBold"></Setter>
+                                        <Setter Property="BorderThickness" Value="0,0,1,2"></Setter>
+                                        <Setter Property="BorderBrush" Value="Black"></Setter>
+                                        <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
+                                    </Style>
+                                </DataGrid.Resources>
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Nombre" Width="170" CanUserResize="false" />
+                                    <DataGridTextColumn Header="Total entrega" Width="123" CanUserResize="false"/>
+                                    <DataGridTextColumn Header="Billetes"  Width="123" CanUserResize="false" />
+                                    <DataGridTextColumn Header="Monedas"  Width="123" CanUserResize="false"/>
+                                    <DataGridTextColumn Header="Cheques"  Width="123" CanUserResize="false"/>
+                                    <DataGridTextColumn Header="Depositos"  Width="125" CanUserResize="false"/>
+                                </DataGrid.Columns>
+                                <Button/>
+                                <Button/>
+                                <Button/>
+                                <Button/>
+                                <Button/>
+                                <Button/>
+                                <Button/>
+                            </DataGrid>
+                            <StackPanel Orientation="Horizontal">
+                                <Label Content="Total Clientes" FontSize="15" Margin="25 10 10 10 " Width="100"></Label>
+                                <TextBox Width="123" BorderThickness="1" BorderBrush="Black" Margin="35 10 0 10" Height="24"></TextBox>
+                                <TextBox Width="123" BorderThickness="1" BorderBrush="Black" Margin="0 10 0 10" Height="24"></TextBox>
+                                <TextBox Width="123" BorderThickness="1" BorderBrush="Black" Margin="0 10 0 10" Height="24"></TextBox>
+                                <TextBox Width="123" BorderThickness="1" BorderBrush="Black" Margin="0 10 0 10" Height="24"></TextBox>
+                                <TextBox Width="126" BorderThickness="1" BorderBrush="Black" Margin="0 10 0 10" Height="24"></TextBox>
+                            </StackPanel>
+                            <Button Content="Nuevo Ingreso" Width="150" Background="Coral" Click="Button_Click"></Button>
+                        </StackPanel>
+                    </TabItem>
+
+                    <TabItem Header="Clientes">
+                        <StackPanel Orientation="Vertical">
+                            <DataGrid Name="dtgReparto" HorizontalAlignment="Left" Height="410" Width="790" BorderThickness="1">
+                                <DataGrid.Resources>
+                                    <Style TargetType="{x:Type DataGridColumnHeader}" >
+                                        <Setter Property="Background" Value="Turquoise"></Setter>
+                                        <Setter Property="FontWeight" Value="SemiBold"></Setter>
+                                        <Setter Property="BorderThickness" Value="0,0,1,2"></Setter>
+                                        <Setter Property="BorderBrush" Value="Black"></Setter>
+                                        <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
+                                    </Style>
+                                </DataGrid.Resources>
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Nombre" Width="170" CanUserResize="false" />
+                                    <DataGridTextColumn Header="Total entrega" Width="123" CanUserResize="false"/>
+                                    <DataGridTextColumn Header="Billetes"  Width="123" CanUserResize="false" />
+                                    <DataGridTextColumn Header="Monedas"  Width="123" CanUserResize="false"/>
+                                    <DataGridTextColumn Header="Cheques"  Width="123" CanUserResize="false"/>
+                                    <DataGridTextColumn Header="Depositos"  Width="125" CanUserResize="false"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                            <StackPanel Orientation="Horizontal">
+                                <Label Content="Total Repartos" FontSize="15" Margin="25 10 10 10 " Width="110"></Label>
+                                <TextBox Width="123" BorderThickness="1" BorderBrush="Black" Margin="25 10 0 10" Height="24"></TextBox>
+                                <TextBox Width="123" BorderThickness="1" BorderBrush="Black" Margin="0 10 0 10" Height="24"></TextBox>
+                                <TextBox Width="123" BorderThickness="1" BorderBrush="Black" Margin="0 10 0 10" Height="24"></TextBox>
+                                <TextBox Width="123" BorderThickness="1" BorderBrush="Black" Margin="0 10 0 10" Height="24"></TextBox>
+                                <TextBox Width="126" BorderThickness="1" BorderBrush="Black" Margin="0 10 0 10" Height="24"></TextBox>
+                            </StackPanel>
+                            <Button Content="Nuevo Ingreso" Width="150" Background="Aqua"></Button>
+                        </StackPanel>
+
+                    </TabItem>
+                </TabControl>
+
+                <StackPanel Orientation="Horizontal" Height="123" Margin="0 10 0 0">
+
+                    <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin=" 10 0 0 0" >
+                        <Border Background="Coral" BorderBrush="Black" BorderThickness="1">
+                            <!-- inicio y salida de caja-->
+                            <StackPanel Orientation="Vertical">
+
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                    <Label Content="Inicio de caja"  FontSize="15"></Label>
+                                    <TextBox BorderThickness="1" BorderBrush="Black" Width="100" Height="20" Margin="4 0 4 0" ></TextBox>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0 10 0 0">
+                                    <Label Content="Salida de caja"   FontSize="15"></Label>
+                                    <TextBox BorderThickness="1" BorderBrush="Black" Width="100" Height="20"></TextBox>
+                                </StackPanel>
+                            </StackPanel>
+
+                        </Border>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="110 0 0 0" Width="170" >
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Top" >
+                            <Label Content="Existencia en Caja"  FontSize="20" Margin="0 0 0 10" ></Label>
+                            <TextBox BorderThickness="3" Width="140" Height="30" FontSize="20" Text="100000" BorderBrush="Black" HorizontalContentAlignment="Center"/>
+
+                        </StackPanel>
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="30 0 0 0 " />
+
+                    </StackPanel>
+
+                </StackPanel>
+            </StackPanel>
+
+
+            <StackPanel  Grid.Column="2" Orientation="Vertical" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="5 0 0 0">
+                <Label Content="EGRESOS DE CAJA" FontWeight="ExtraBlack" HorizontalAlignment="Center" ></Label>
+                <TabControl Width="540" Height="520"  VerticalAlignment="Top" BorderThickness="2" BorderBrush="DarkBlue" >
+                    <TabItem Header="Proveedores, Empleados y Otros">
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Top">
+                            <DataGrid x:Name="dtgEgresoEmpleado" HorizontalAlignment="Left" Height="410"  VerticalAlignment="Top" Width="530"  >
+                                <DataGrid.Resources>
+                                    <Style TargetType="{x:Type DataGridColumnHeader}" >
+                                        <Setter Property="Background" Value="Coral"/>
+                                        <Setter Property="FontWeight" Value="SemiBold"/>
+                                        <Setter Property="BorderThickness" Value="0,0,1,2"/>
+                                        <Setter Property="BorderBrush" Value="Black"/>
+                                        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                                    </Style>
+                                </DataGrid.Resources>
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Nombre" Width="170" CanUserResize="false" />
+                                    <DataGridTextColumn Header="Billetes" Width="123" CanUserResize="false"/>
+                                    <DataGridTextColumn Header="Monedas"  Width="123" CanUserResize="false" />
+                                    <DataGridTextColumn Header="Total"  Width="123" CanUserResize="false"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                            <StackPanel Orientation="Horizontal">
+                                <Label Content="Total Egresos" FontSize="15" Margin="25 10 10 10 " Width="120"></Label>
+                                <TextBox Width="123" BorderThickness="1" BorderBrush="Black" Margin="15 10 0 10" Height="24"></TextBox>
+                                <TextBox Width="123" BorderThickness="1" BorderBrush="Black" Margin="0 10 0 10" Height="24"></TextBox>
+                                <TextBox Width="114" BorderThickness="1" BorderBrush="Black" Margin="0 10 0 10" Height="24"></TextBox>
+                            </StackPanel>
+                            <Button Content="Nuevo Egreso" Width="150" Background="Coral" />
+                        </StackPanel>
+                    </TabItem>
+                </TabControl>
+                <Button Content="Cerrar Caja" Width="100" Height="20" Background="Coral" Margin="110 60 0 0"></Button>
+            </StackPanel>
+        </Grid>
+        
+    </Grid>
+
+
+
+</Window>

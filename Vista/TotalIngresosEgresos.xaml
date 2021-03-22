@@ -1,0 +1,63 @@
+﻿<Window x:Class="Tesoreria.TotalIngresosEgresos"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tesoreria"
+        mc:Ignorable="d"
+        Title="Totales de Ingresos y Egresos" Height="350" Width="600">
+    <Grid >
+        <Grid.RowDefinitions >
+            <RowDefinition Height="240" ></RowDefinition>
+            <RowDefinition Height="110"></RowDefinition>
+        </Grid.RowDefinitions>
+        <!-- Igresos-->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="100,40,100,0">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                <Label Content="Total Ingresos" FontSize="15" HorizontalAlignment="Center"></Label>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Billetes" Width="63"></Label>
+                    <TextBox Width="100"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0 5 0 5">
+                    <Label Content="Monedas" Width="63"></Label>
+                    <TextBox Width="100"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Cheques" Width="63"></Label>
+                    <TextBox Width="100"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0 5 0 5">
+                    <Label Content="Depositos" Width="63"></Label>
+                    <TextBox Width="100"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Total" Width="63" FontSize="15" BorderBrush="Black"></Label>
+                    <TextBox Width="100"></TextBox>
+                </StackPanel>
+            </StackPanel>
+
+            <!-- Egresos-->
+            <StackPanel  Orientation="Vertical" HorizontalAlignment="Center" Margin="20 0 0 0">
+                <Label Content="Total Egresos" FontSize="15"  HorizontalAlignment="Center"></Label>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Billetes" Width="63"></Label>
+                    <TextBox Width="100"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0 5 0 5">
+                    <Label Content="Monedas" Width="63"></Label>
+                    <TextBox Width="100"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Total" Width="63" FontSize="15" BorderBrush="Black" ></Label>
+                    <TextBox Width="100"></TextBox>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Button Content="Imprimir" Height="25" Width="50" Margin="0 0 40 0"></Button>
+            <Button Content="Salir"  Height="25" Width="50"></Button>
+        </StackPanel>
+
+    </Grid>
+</Window>

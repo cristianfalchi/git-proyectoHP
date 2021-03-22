@@ -1,0 +1,3 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Tesoreria" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-THC7HD4;Initial Catalog=Tesoreria;Integrated Security=True" SettingsObjectName="Tesoreria.Properties.Settings" SettingsPropertyName="TesoreriaConnectionString" Provider="System.Data.SqlClient" />
+</Database>

@@ -1,0 +1,39 @@
+﻿<Window x:Class="Tesoreria.Vista.CajaP"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tesoreria.Vista"
+        mc:Ignorable="d"
+        Title="CajaP" Height="500" Width="850">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="350"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        
+        <DataGrid Name="dtgResponsable" Grid.Row="0" Margin="10" BorderThickness="3">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Responsable" ></DataGridTextColumn>
+                <DataGridTextColumn Header="Total General" ></DataGridTextColumn>
+                <DataGridTextColumn Header="Efectivo" ></DataGridTextColumn>
+                <DataGridTextColumn Header="Monedas" ></DataGridTextColumn>
+                <DataGridTextColumn Header="Cheques" ></DataGridTextColumn>
+                <DataGridTextColumn Header="Depositos" ></DataGridTextColumn>
+                <DataGridTextColumn Header="Observacion" ></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Button  x:Name="btnNuevoItem" Grid.Row="1" Width="150" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10 0 0 0">Nuevo item</Button>
+        <TextBlock Grid.Row="1" Margin="170 0 0 0">Total Efectivo</TextBlock>
+        <TextBox Grid.Row="1" Width="120" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="245 0 0 0"></TextBox>
+        <TextBlock Grid.Row="1" Margin="380 0 0 0">Total Monedas</TextBlock>
+        <TextBox Grid.Row="1" Width="120" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="465 0 0 0"></TextBox>
+        <TextBlock Grid.Row="1" Margin= "600 0 0 0">Total General</TextBlock>
+        <TextBox Grid.Row="1" Width="120" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="680 0 0 0"></TextBox>
+
+        <Button Grid.Row="2" x:Name="btnGuardarCaja" Content="Guardar" Width="150" Height="40" HorizontalAlignment="Left" Margin="10 0 0 0"></Button>
+    </Grid>
+</Window>

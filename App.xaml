@@ -1,0 +1,11 @@
+﻿<Application x:Class="Tesoreria.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Tesoreria"
+             StartupUri="Vista/Principal.xaml">
+    <Application.Resources>
+     
+    </Application.Resources>
+
+
+</Application>
