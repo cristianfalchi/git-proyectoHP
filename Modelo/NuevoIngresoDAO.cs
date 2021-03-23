@@ -20,7 +20,7 @@ namespace Tesoreria.Modelo
             using (SqlConnection conexion = new SqlConnection(cadConexion))
             {
 
-                SqlCommand command = new SqlCommand(consulta, conexion);
+                //SqlCommand command = new SqlCommand(consulta, conexion);
                 command.Connection.Open();
 
                 SqlDataReader dataReader = command.ExecuteReader();
