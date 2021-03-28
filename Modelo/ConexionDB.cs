@@ -11,7 +11,7 @@ namespace Tesoreria.DAO
 {
     public class ConexionDB
     {
-        protected String cadConexion = ConfigurationManager.ConnectionStrings["Tesoreria.Properties.Settings.TesoreriaConnectionString"].ConnectionString;
+        protected String cadConexion = ConfigurationManager.ConnectionStrings["Tesoreria.Properties.Settings.TesoreriaConnectionString1"].ConnectionString;
         
         //protected DataClasses1DataContext dataContext;    
     }

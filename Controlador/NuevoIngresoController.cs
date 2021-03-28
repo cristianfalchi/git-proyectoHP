@@ -45,7 +45,13 @@ namespace Tesoreria.Controlador
         {
             if (viewNuevoIngreso.txtBlResponsable.Text == "")
                 MessageBox.Show("Debe seleccionar un responsable por favor");
+            else 
+            {
+                
+            
+            }
         }
+
 
         // Busca elemento seleccionado
 

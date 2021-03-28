@@ -89,6 +89,11 @@
     <Compile Include="Modelo\DTO\NuevoIngresoClienteDTO.cs" />
     <Compile Include="Modelo\DTO\NuevoIngresoEmpleadoDTO.cs" />
     <Compile Include="Modelo\NuevoIngresoDAO.cs" />
+    <Compile Include="TesoreriaDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TesoreriaDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Vista\CajaP.xaml.cs">
       <DependentUpon>CajaP.xaml</DependentUpon>
     </Compile>
@@ -217,6 +222,17 @@
     </None>
     <None Include="TesoreriaDataSet.xss">
       <DependentUpon>TesoreriaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TesoreriaDataSet1.xsc">
+      <DependentUpon>TesoreriaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="TesoreriaDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TesoreriaDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TesoreriaDataSet1.xss">
+      <DependentUpon>TesoreriaDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

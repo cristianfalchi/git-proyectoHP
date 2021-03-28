@@ -15,12 +15,12 @@ namespace Tesoreria.Modelo
 
         public List<NuevoIngresoEmpleadoDTO> ObtenerEmpleados() 
         {
-            String consulta = "SELECT id, concat(nombre, ' ', apellido) AS nomYApe FROM Empleado ";
+            String consulta = "SELECT id, apellidoYNombre FROM Empleado ";
 
             using (SqlConnection conexion = new SqlConnection(cadConexion))
             {
 
-                //SqlCommand command = new SqlCommand(consulta, conexion);
+                SqlCommand command = new SqlCommand(consulta, conexion);
                 command.Connection.Open();
 
                 SqlDataReader dataReader = command.ExecuteReader();
